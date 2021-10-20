@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/issueTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        tools:text="Issues" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/userImgView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/usernameTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="cursive"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="18dp"
+            android:textStyle="italic"
+            tools:text="WatchDeck" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/issueDescTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:maxLength="200"
+        android:textColor="@color/purple_500"
+        android:textSize="15dp"
+        tools:text="Issue Description"
+        />
+</LinearLayout>
