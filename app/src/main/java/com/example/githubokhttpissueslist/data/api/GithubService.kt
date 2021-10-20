@@ -6,7 +6,7 @@ import retrofit2.http.GET
 
 interface GithubService {
     @GET("issues")
-    suspend fun getIssues(): Response<Issues>
+    suspend fun getIssues(): Response<List<Issues>>
 
 
 }
