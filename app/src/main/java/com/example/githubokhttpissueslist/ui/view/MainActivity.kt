@@ -10,7 +10,7 @@ import com.example.githubokhttpissueslist.ui.viewModel.GithubViewModel
 
 class MainActivity : AppCompatActivity() {
 
-    val vm by lazy {
+    private val vm by lazy {
         ViewModelProvider(this).get(GithubViewModel::class.java)
     }
 
