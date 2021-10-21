@@ -26,12 +26,21 @@ class IssueAdapter(private val data: List<Issues>) : RecyclerView.Adapter<IssueV
 
 class IssueViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun bind(item: Issues) = with(itemView) {
+
+        val colors = resources.getIntArray(R.array.random_color)
+        val randomColor = colors[Random().nextInt(colors.size)]
+        viewColorTag.setBackgroundColor(randomColor)
         issueTv.text = item.title
         usernameTv.text = item.user?.login
         issueDescTv.text = item.body
         Picasso.get().load(item.user?.avatarUrl).into(userImgView)
         lastDateTv.text = "Last Updated :${
-            SimpleDateFormat(" MM-dd-yyyy", Locale.ROOT).format(SimpleDateFormat("yyyy-MM-dd",Locale.ROOT).parse(item.updatedAt)).toString()
+            SimpleDateFormat(" MM-dd-yyyy", Locale.ROOT).format(
+                SimpleDateFormat(
+                    "yyyy-MM-dd",
+                    Locale.ROOT
+                ).parse(item.updatedAt)
+            ).toString()
         }"
     }
 }

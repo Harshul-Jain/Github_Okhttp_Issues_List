@@ -1,65 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:layout_marginBottom="10dp"
+    android:elevation="20dp"
+    android:padding="10dp"
+    app:cardCornerRadius="10dp">
 
-    <TextView
-        android:id="@+id/issueTv"
+    <View
+        android:id="@+id/viewColorTag"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:justificationMode="none"
-        android:textColor="@android:color/holo_red_light"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        tools:text="Issues" />
+        android:layout_height="match_parent" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
+        android:layout_margin="10dp"
+        android:background="@android:color/white"
+        android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/userImgView"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="5dp"
-            tools:src="@tools:sample/avatars" />
-
-        <TextView
-            android:id="@+id/usernameTv"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="cursive"
-            android:textColor="@android:color/holo_orange_light"
-            android:textSize="24dp"
-            android:textStyle="italic|bold"
-            tools:text="WatchDeck" />
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/issueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="none"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                tools:text="Issues" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/userImgView"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    tools:src="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/usernameTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="cursive"
+                    android:textColor="@android:color/holo_orange_light"
+                    android:textSize="24dp"
+                    android:textStyle="italic|bold"
+                    tools:text="WatchDeck" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lastDateTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:text="14sp"
+                android:textColor="@android:color/holo_green_dark"
+                tools:text="Last Updated : mm-dd-yyyy" />
+
+            <TextView
+                android:id="@+id/issueDescTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:maxLength="200"
+                android:textColor="@color/purple_500"
+                android:textSize="20dp"
+                tools:text="Issue Description" />
+        </LinearLayout>
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/lastDateTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:text="14sp"
-        android:textColor="@android:color/holo_green_dark"
-        tools:text="Last Updated : mm-dd-yyyy" />
-
-    <TextView
-        android:id="@+id/issueDescTv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="20dp"
-        android:maxLength="200"
-        android:textColor="@color/purple_500"
-        android:textSize="20dp"
-        tools:text="Issue Description" />
-</LinearLayout>
+</com.google.android.material.card.MaterialCardView>
