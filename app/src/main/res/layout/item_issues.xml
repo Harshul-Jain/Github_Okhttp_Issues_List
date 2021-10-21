@@ -9,9 +9,9 @@
         android:id="@+id/issueTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:justificationMode="none"
         android:textColor="@android:color/holo_red_light"
-        android:textSize="26sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         tools:text="Issues" />
 
@@ -37,20 +37,29 @@
             android:layout_gravity="center"
             android:fontFamily="cursive"
             android:textColor="@android:color/holo_orange_light"
-            android:textSize="18dp"
-            android:textStyle="italic"
+            android:textSize="24dp"
+            android:textStyle="italic|bold"
             tools:text="WatchDeck" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/lastDateTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:text="14sp"
+        android:textColor="@android:color/holo_green_dark"
+        tools:text="Last Updated : mm-dd-yyyy" />
 
     <TextView
         android:id="@+id/issueDescTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:fontFamily="sans-serif-condensed-light"
+        android:layout_marginBottom="20dp"
         android:maxLength="200"
         android:textColor="@color/purple_500"
-        android:textSize="15dp"
-        tools:text="Issue Description"
-        />
+        android:textSize="20dp"
+        tools:text="Issue Description" />
 </LinearLayout>
